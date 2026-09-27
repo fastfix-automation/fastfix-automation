@@ -19,6 +19,22 @@ Business account, via the Meta Graph API.
 {
   "caption": "Locked out in Milton? We're there in 15 minutes. 🔑",
   "image_url": "https://<username>.github.io/fastfix-automation/images/job1.jpg",
-  "targets": ["facebook", "instagram"]
+  "targets": ["facebook", "instagram"],
+  "publish_at": "2026-09-29T23:00:00Z"
 }
 ```
+`publish_at` is optional (ISO 8601, UTC). Omit it to publish immediately on push.
+With it, the post stays queued until that time — a workflow also runs hourly
+(`schedule: cron "5 * * * *"`) so scheduled posts go out automatically even if
+nothing new was pushed that day.
+
+## Posting cadence
+Fixed posting days: **Monday + Thursday**. Claude queues each post with a
+`publish_at` set to 9am Brisbane time (UTC+10, e.g. 23:00 UTC the day before) on
+the next of those two days, so posts go out on schedule regardless of when the
+graphic/caption was actually prepared and pushed.
+
+At the start of each month, Claude generates ~8 post content briefs (topic mix +
+suburb rotation) covering the month's Mon/Thu slots. The user turns each brief into
+a graphic (via his own GPT session with the brand data), sends it back, and Claude
+writes the caption and queues it for the correct date.

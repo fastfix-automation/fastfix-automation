@@ -21,6 +21,7 @@ import json
 import os
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -66,6 +67,17 @@ def publish_to_instagram(caption: str, image_url: str) -> str:
     )
     publish.raise_for_status()
     return publish.json()["id"]
+
+
+def is_due(post: dict) -> bool:
+    """A post with no publish_at is due immediately. A post with publish_at (ISO 8601,
+    e.g. "2026-09-29T23:00:00Z" for Brisbane time converted to UTC) is only due once
+    that time has passed."""
+    publish_at = post.get("publish_at")
+    if not publish_at:
+        return True
+    scheduled = datetime.fromisoformat(publish_at.replace("Z", "+00:00"))
+    return datetime.now(timezone.utc) >= scheduled
 
 
 def process_file(path: Path) -> None:
@@ -115,6 +127,10 @@ def main() -> int:
 
     had_error = False
     for f in queue_files:
+        post = json.loads(f.read_text())
+        if not is_due(post):
+            print(f"SCHEDULED (not due yet): {f.name} -> publish_at={post.get('publish_at')}")
+            continue
         errors = process_file(f)
         if errors:
             had_error = True

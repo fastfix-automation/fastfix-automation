@@ -6,6 +6,10 @@ on:
     paths:
       - "queue/**.json"
   workflow_dispatch: {}
+  schedule:
+    # Runs hourly so scheduled posts (queue files with a future "publish_at") go out
+    # automatically at the right time, even if nothing was just pushed.
+    - cron: "5 * * * *"
 
 permissions:
   contents: write
