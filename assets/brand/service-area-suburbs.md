@@ -45,10 +45,18 @@ Carindale, Chandler, Coorparoo, Gumdale, Hawthorne, Hemmant, Lota, Lytton, Manly
 Manly West, Morningside, Murarrie, Norman Park, Port of Brisbane, Ransome,
 Seven Hills, Tingalpa, Wakerley, Wynnum, Wynnum West
 
-## PRIORITY suburbs (use these first/most often)
-Brisbane, South Brisbane, South Bank, West End, Woolloongabba, Kangaroo Point,
-Milton, Toowong, Auchenflower, Paddington, Fortitude Valley, New Farm, Newstead,
-Coorparoo, St Lucia, Annerley, Greenslopes, Norman Park, Ashgrove, Clayfield, Windsor
+## PRIORITY suburbs (final list, confirmed 2026-09-27 — use in MOST posts)
+Milton, Toowong, Annerley, Ashgrove, New Farm, Newstead, St Lucia, West End,
+Clayfield, Coorparoo, Paddington, Greenslopes, Norman Park, Auchenflower, Windsor,
+Brisbane City, Woolloongabba, Kangaroo Point, South Brisbane, Fortitude Valley
+(20 suburbs total)
+
+These are the most important suburbs to the business — the goal is to have one of
+these show up (in the caption text and/or hashtags) across most posts, not just
+occasional suburb-specific posts. Rotate through this list rather than repeating
+the same one or two suburbs every time. This supersedes the earlier draft priority
+list (which had "Brisbane" instead of "Brisbane City" and no confirmed rotation
+intent).
 
 The full list below is the complete real set of 170+ service-area pages on the site —
 useful as a fallback/reference, but for social content default to the priority list
