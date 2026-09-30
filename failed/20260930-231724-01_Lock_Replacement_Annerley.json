@@ -5,5 +5,10 @@
     "facebook",
     "instagram"
   ],
-  "publish_at": "2026-09-30T23:00:00Z"
+  "publish_at": "2026-09-30T23:00:00Z",
+  "errors": {
+    "facebook": "400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1399439873246044/photos",
+    "instagram": "400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841414569163122/media"
+  },
+  "partial_results": {}
 }
