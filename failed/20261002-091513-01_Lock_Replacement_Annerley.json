@@ -1,0 +1,14 @@
+{
+  "caption": "Old or worn-out lock in Annerley? We replace damaged and outdated locks with quality hardware — fast, professional installation.\n\n📞 0452 028 983 | FastFix Locksmith Brisbane\n\n#AnnerleyLocksmith #LockReplacementBrisbane #FastFixLocksmith #BrisbaneLocksmith",
+  "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/01_Lock_Replacement_Annerley.png",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "publish_at": "2026-10-02T09:14:50Z",
+  "errors": {
+    "facebook": "400 Bad Request for https://graph.facebook.com/v21.0/1399439873246044/photos -> {'error': {'message': 'API access blocked.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AiBcIYpUmWVnerFlAv8aH6t'}}",
+    "instagram": "400 Bad Request for https://graph.facebook.com/v21.0/17841414569163122/media -> {'error': {'message': 'API access blocked.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AbmqHUcy-kluwQ6KlnYZl9M'}}"
+  },
+  "partial_results": {}
+}
