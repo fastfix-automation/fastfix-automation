@@ -38,13 +38,26 @@ PUBLISHED_DIR = ROOT / "published"
 FAILED_DIR = ROOT / "failed"
 
 
+def _raise_with_body(resp: "requests.Response") -> None:
+    """Like resp.raise_for_status(), but includes Meta's actual error body —
+    the default requests error only has the HTTP status, which hides the real
+    reason (bad token, bad image URL, permissions, etc.)."""
+    if resp.ok:
+        return
+    try:
+        detail = resp.json()
+    except ValueError:
+        detail = resp.text
+    raise RuntimeError(f"{resp.status_code} {resp.reason} for {resp.url} -> {detail}")
+
+
 def publish_to_facebook(caption: str, image_url: str) -> str:
     resp = requests.post(
         f"{GRAPH_API}/{FB_PAGE_ID}/photos",
         data={"url": image_url, "caption": caption, "access_token": PAGE_TOKEN},
         timeout=60,
     )
-    resp.raise_for_status()
+    _raise_with_body(resp)
     return resp.json().get("post_id") or resp.json().get("id")
 
 
@@ -54,7 +67,7 @@ def publish_to_instagram(caption: str, image_url: str) -> str:
         data={"image_url": image_url, "caption": caption, "access_token": PAGE_TOKEN},
         timeout=60,
     )
-    create.raise_for_status()
+    _raise_with_body(create)
     creation_id = create.json()["id"]
 
     # IG sometimes needs a moment to finish processing the image before publish.
@@ -65,7 +78,7 @@ def publish_to_instagram(caption: str, image_url: str) -> str:
         data={"creation_id": creation_id, "access_token": PAGE_TOKEN},
         timeout=60,
     )
-    publish.raise_for_status()
+    _raise_with_body(publish)
     return publish.json()["id"]
 
 
