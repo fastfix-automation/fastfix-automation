@@ -14,6 +14,13 @@ on:
 permissions:
   contents: write
 
+# Only one publish run at a time, and never skip/cancel a queued one — if two
+# runs overlapped, both could call the Meta API for the same post before
+# either commits the "already posted" result, causing a double-post.
+concurrency:
+  group: publish-queue
+  cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -39,5 +46,23 @@ jobs:
           git config user.name "fastfix-automation-bot"
           git config user.email "actions@github.com"
           git add queue published failed
-          git diff --staged --quiet || git commit -m "Post result $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          git push
+          git diff --staged --quiet && exit 0
+
+          git commit -m "Post result $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          # The queue/published/failed move already happened locally (and the
+          # Meta API calls already fired) — losing this push would mean the
+          # next run re-publishes the same post. So on a non-fast-forward
+          # rejection (e.g. another push landed on main meanwhile), rebase
+          # onto the new remote tip and retry instead of giving up.
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt) — rebasing onto latest main and retrying."
+            git fetch origin main
+            git rebase origin/main
+            sleep 3
+          done
+          echo "::error::Could not push publish results after 5 attempts — check for a stuck/conflicting commit on main."
+          exit 1
