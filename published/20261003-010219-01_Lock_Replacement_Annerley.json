@@ -5,5 +5,9 @@
     "facebook",
     "instagram"
   ],
-  "publish_at": "2026-10-03T01:01:45Z"
+  "publish_at": "2026-10-03T01:01:45Z",
+  "results": {
+    "facebook_post_id": "1399439873246044_122106353793489298",
+    "instagram_media_id": "17966436672170984"
+  }
 }
