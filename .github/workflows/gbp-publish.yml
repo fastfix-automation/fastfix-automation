@@ -1,0 +1,63 @@
+name: GBP publish queued posts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "gbp_queue/**.json"
+  workflow_dispatch: {}
+  schedule:
+    # Hourly, offset from the FB/IG publish.yml cron, so scheduled GBP posts
+    # go out on time even if nothing new was pushed that day.
+    - cron: "35 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gbp-publish-queue
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Publish to Google Business Profile
+        working-directory: scripts
+        env:
+          GBP_CLIENT_ID: ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET: ${{ secrets.GBP_CLIENT_SECRET }}
+          GBP_REFRESH_TOKEN: ${{ secrets.GBP_REFRESH_TOKEN }}
+          GBP_ACCOUNT_ID: ${{ secrets.GBP_ACCOUNT_ID }}
+          GBP_LOCATION_ID: ${{ secrets.GBP_LOCATION_ID }}
+        run: python gbp_publish.py
+
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "fastfix-automation-bot"
+          git config user.email "actions@github.com"
+          git add gbp_queue gbp_published gbp_failed
+          git diff --staged --quiet && exit 0
+
+          git commit -m "GBP post result $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt) — rebasing onto latest main and retrying."
+            git fetch origin main
+            git rebase origin/main
+            sleep 3
+          done
+          echo "::error::Could not push GBP publish results after 5 attempts."
+          exit 1

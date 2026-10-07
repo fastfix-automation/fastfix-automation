@@ -38,3 +38,40 @@ At the start of each month, Claude generates ~8 post content briefs (topic mix +
 suburb rotation) covering the month's Mon/Thu slots. The user turns each brief into
 a graphic (via his own GPT session with the brand data), sends it back, and Claude
 writes the caption and queues it for the correct date.
+
+## Google Business Profile (reviews + posts)
+
+Separate pipeline from FB/IG, because the Business Profile API only supports
+OAuth user-consent auth (no permanent token) — see `scripts/gbp_common.py`.
+
+**One-time setup (Stav runs this himself, locally, once):**
+1. In Google Cloud Console project `fastfix-automation` (956761794779), create
+   an OAuth Client ID (Application type: Desktop app).
+2. `pip install google-auth-oauthlib requests`
+3. `python scripts/gbp_auth_setup.py` — logs in via browser, prints a refresh
+   token plus every account/location ID you manage.
+4. Add as repo secrets: `GBP_CLIENT_ID`, `GBP_CLIENT_SECRET`,
+   `GBP_REFRESH_TOKEN`, `GBP_ACCOUNT_ID`, `GBP_LOCATION_ID`.
+
+**Reviews** (`.github/workflows/gbp-reviews.yml`, every 6h + on push to
+`reviews/reply-queue/`):
+- `scripts/gbp_fetch_reviews.py` pulls new, unreplied reviews into
+  `reviews/pending/<reviewId>.json`.
+- Claude's daily check-in reads `reviews/pending/`, drafts a reply, and sends
+  it to Stav for approval in chat — nothing posts automatically.
+- Once approved, Claude commits `reviews/reply-queue/<reviewId>.json`
+  (`{"review_id": "...", "reply_text": "..."}`); the workflow posts it via
+  `scripts/gbp_reply.py` and files the result in `reviews/replied/`.
+
+**Posts** (`.github/workflows/gbp-publish.yml`, hourly + on push to
+`gbp_queue/`): same queue pattern as FB/IG — drop a file in `gbp_queue/`:
+```json
+{
+  "summary": "Need a locksmith in Milton? We're there in 15 minutes.",
+  "image_url": "https://<username>.github.io/fastfix-automation/images/job1.jpg",
+  "cta": {"actionType": "CALL"},
+  "publish_at": "2026-10-12T23:00:00Z"
+}
+```
+`scripts/gbp_publish.py` posts it as a GBP "What's New" update; the file
+moves to `gbp_published/` or `gbp_failed/`.
