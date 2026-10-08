@@ -91,14 +91,20 @@ def main() -> int:
         print("No queued GBP posts.")
         return 0
 
+    due = []
+    for f in queue_files:
+        post = json.loads(f.read_text())
+        if is_due(post):
+            due.append(f)
+        else:
+            print(f"SCHEDULED (not due yet): {f.name} -> publish_at={post.get('publish_at')}")
+    if not due:
+        return 0
+
     access_token = get_access_token()
     had_error = False
 
-    for f in queue_files:
-        post = json.loads(f.read_text())
-        if not is_due(post):
-            print(f"SCHEDULED (not due yet): {f.name} -> publish_at={post.get('publish_at')}")
-            continue
+    for f in due:
         result = process_file(f, access_token)
         if result.get("error"):
             had_error = True
