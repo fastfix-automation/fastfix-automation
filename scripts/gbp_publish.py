@@ -48,8 +48,9 @@ def build_local_post_body(post: dict) -> dict:
         "languageCode": "en-AU",
         "summary": post["summary"],
         "topicType": "STANDARD",
-        "media": [{"mediaFormat": "PHOTO", "sourceUrl": post["image_url"]}],
     }
+    if post.get("image_url"):
+        body["media"] = [{"mediaFormat": "PHOTO", "sourceUrl": post["image_url"]}]
     if post.get("cta"):
         body["callToAction"] = post["cta"]
     return body
