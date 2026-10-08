@@ -1,0 +1,27 @@
+{
+  "summary": "Ready to go keyless? We install smart locks for homes and businesses in New Farm — modern, secure, no more fumbling for keys.",
+  "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/03_Smart_Lock_Installation_New_Farm.png",
+  "cta": {
+    "actionType": "CALL"
+  },
+  "result": {
+    "name": "accounts/115928455367162539836/locations/9010701955233232352/localPosts/6865104767663976826",
+    "languageCode": "en",
+    "summary": "Ready to go keyless? We install smart locks for homes and businesses in New Farm — modern, secure, no more fumbling for keys.",
+    "callToAction": {
+      "actionType": "CALL"
+    },
+    "state": "PROCESSING",
+    "updateTime": "2026-10-08T02:31:11.479292Z",
+    "createTime": "2026-10-08T02:31:11.479292Z",
+    "searchUrl": "https://local.google.com/place?id=13286917434322931730&use=posts&lpsid=CIHM0ogKEK7tpvbJp_apjwE",
+    "media": [
+      {
+        "name": "accounts/115928455367162539836/locations/9010701955233232352/media/localPosts/AF1QipM2yf4OADqLUxFYk1UzuFbn8jjXGsQ9RmGPIgph",
+        "mediaFormat": "PHOTO",
+        "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipM2yf4OADqLUxFYk1UzuFbn8jjXGsQ9RmGPIgph"
+      }
+    ],
+    "topicType": "STANDARD"
+  }
+}
