@@ -24,11 +24,11 @@ TOKEN_URL = "https://oauth2.googleapis.com/token"
 # did not replace these endpoints.
 MYBUSINESS_API = "https://mybusiness.googleapis.com/v4"
 
-CLIENT_ID = os.environ.get("GBP_CLIENT_ID")
-CLIENT_SECRET = os.environ.get("GBP_CLIENT_SECRET")
-REFRESH_TOKEN = os.environ.get("GBP_REFRESH_TOKEN")
-ACCOUNT_ID = os.environ.get("GBP_ACCOUNT_ID")
-LOCATION_ID = os.environ.get("GBP_LOCATION_ID")
+CLIENT_ID = (os.environ.get("GBP_CLIENT_ID") or "").strip() or None
+CLIENT_SECRET = (os.environ.get("GBP_CLIENT_SECRET") or "").strip() or None
+REFRESH_TOKEN = (os.environ.get("GBP_REFRESH_TOKEN") or "").strip() or None
+ACCOUNT_ID = (os.environ.get("GBP_ACCOUNT_ID") or "").strip() or None
+LOCATION_ID = (os.environ.get("GBP_LOCATION_ID") or "").strip() or None
 
 
 def _raise_with_body(resp: "requests.Response") -> None:
@@ -66,6 +66,13 @@ def get_access_token() -> str:
         },
         timeout=30,
     )
+    if not resp.ok:
+        hint = ""
+        if "invalid_client" in resp.text:
+            hint = " HINT: GBP_CLIENT_ID/GBP_CLIENT_SECRET in GitHub secrets do not match the OAuth client in Google Cloud (wrong or old secret)."
+        elif "invalid_grant" in resp.text:
+            hint = " HINT: GBP_REFRESH_TOKEN was revoked or expired; re-run scripts/gbp_auth_setup.py."
+        print(f"TOKEN ERROR {resp.status_code}: {resp.text}{hint}")
     _raise_with_body(resp)
     return resp.json()["access_token"]
 
