@@ -1,0 +1,28 @@
+{
+  "summary": "Running a business in Newstead? We look after your locks, keys and access — installation, rekeying and ongoing maintenance for commercial properties. Tap Call to talk to FastFix Locksmith Brisbane.",
+  "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/04_Commercial_Locksmith_Newstead.png",
+  "cta": {
+    "actionType": "CALL"
+  },
+  "publish_at": "2026-10-11T23:00:00Z",
+  "result": {
+    "name": "accounts/115928455367162539836/locations/9010701955233232352/localPosts/15607589946063872",
+    "languageCode": "en",
+    "summary": "Running a business in Newstead? We look after your locks, keys and access — installation, rekeying and ongoing maintenance for commercial properties. Tap Call to talk to FastFix Locksmith Brisbane.",
+    "callToAction": {
+      "actionType": "CALL"
+    },
+    "state": "PROCESSING",
+    "updateTime": "2026-10-13T02:16:52.195958Z",
+    "createTime": "2026-10-13T02:16:52.195958Z",
+    "searchUrl": "https://local.google.com/place?id=13286917434322931730&use=posts&lpsid=CIHM0ogKEMnb_b7ujJivCg",
+    "media": [
+      {
+        "name": "accounts/115928455367162539836/locations/9010701955233232352/media/localPosts/AF1QipPfjaPyaxRuM8-piRjr0ejh_sYiYWgN47ehJJbR",
+        "mediaFormat": "PHOTO",
+        "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipPfjaPyaxRuM8-piRjr0ejh_sYiYWgN47ehJJbR"
+      }
+    ],
+    "topicType": "STANDARD"
+  }
+}
