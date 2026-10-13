@@ -95,6 +95,10 @@ def main() -> int:
     due = []
     for f in queue_files:
         post = json.loads(f.read_text())
+        if any(p.name.endswith("-" + f.name) for p in PUBLISHED_DIR.glob("*.json")):
+            print(f"SKIP (already published, removing duplicate): {f.name}")
+            f.unlink()
+            continue
         if is_due(post):
             due.append(f)
         else:

@@ -141,6 +141,10 @@ def main() -> int:
     had_error = False
     for f in queue_files:
         post = json.loads(f.read_text())
+        if any(p.name.endswith("-" + f.name) for p in PUBLISHED_DIR.glob("*.json")):
+            print(f"SKIP (already published, removing duplicate): {f.name}")
+            f.unlink()
+            continue
         if not is_due(post):
             print(f"SCHEDULED (not due yet): {f.name} -> publish_at={post.get('publish_at')}")
             continue
