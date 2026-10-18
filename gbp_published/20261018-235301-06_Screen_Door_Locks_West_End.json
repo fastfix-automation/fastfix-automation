@@ -1,0 +1,28 @@
+{
+  "summary": "Screen door lock loose or outdated in West End? We install quality, modern screen door locks that actually keep your home secure. Tap Call to talk to FastFix Locksmith Brisbane.",
+  "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/06_Screen_Door_Locks_West_End.png",
+  "cta": {
+    "actionType": "CALL"
+  },
+  "publish_at": "2026-10-18T23:00:00Z",
+  "result": {
+    "name": "accounts/115928455367162539836/locations/9010701955233232352/localPosts/5087440797406818149",
+    "languageCode": "en",
+    "summary": "Screen door lock loose or outdated in West End? We install quality, modern screen door locks that actually keep your home secure. Tap Call to talk to FastFix Locksmith Brisbane.",
+    "callToAction": {
+      "actionType": "CALL"
+    },
+    "state": "PROCESSING",
+    "updateTime": "2026-10-18T23:53:03.363699Z",
+    "createTime": "2026-10-18T23:53:03.363699Z",
+    "searchUrl": "https://local.google.com/place?id=13286917434322931730&use=posts&lpsid=CIHM0ogKEPDq0PPLsvT7_wE",
+    "media": [
+      {
+        "name": "accounts/115928455367162539836/locations/9010701955233232352/media/localPosts/AF1QipM3QKu6qHuleMlqMt0qiBtS2g952CEdJNqp6bDg",
+        "mediaFormat": "PHOTO",
+        "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipM3QKu6qHuleMlqMt0qiBtS2g952CEdJNqp6bDg"
+      }
+    ],
+    "topicType": "STANDARD"
+  }
+}
