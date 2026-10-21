@@ -1,0 +1,28 @@
+{
+  "summary": "Too many different keys for your business in St Lucia? A master key system gives you one key for every door — simpler, more secure access. Tap Call to talk to FastFix Locksmith Brisbane.",
+  "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/05b_Master_Key_Systems_St_Lucia.png",
+  "cta": {
+    "actionType": "CALL"
+  },
+  "publish_at": "2026-10-21T23:00:00Z",
+  "result": {
+    "name": "accounts/115928455367162539836/locations/9010701955233232352/localPosts/5309867182879382018",
+    "languageCode": "en",
+    "summary": "Too many different keys for your business in St Lucia? A master key system gives you one key for every door — simpler, more secure access. Tap Call to talk to FastFix Locksmith Brisbane.",
+    "callToAction": {
+      "actionType": "CALL"
+    },
+    "state": "PROCESSING",
+    "updateTime": "2026-10-21T23:01:08.242725Z",
+    "createTime": "2026-10-21T23:01:08.242725Z",
+    "searchUrl": "https://local.google.com/place?id=13286917434322931730&use=posts&lpsid=CIHM0ogKEP2z4pPsn6XmKg",
+    "media": [
+      {
+        "name": "accounts/115928455367162539836/locations/9010701955233232352/media/localPosts/AF1QipM3HdonUiPl9b9Sa2F6as-QSmxpw5kKgAs4YQzT",
+        "mediaFormat": "PHOTO",
+        "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipM3HdonUiPl9b9Sa2F6as-QSmxpw5kKgAs4YQzT"
+      }
+    ],
+    "topicType": "STANDARD"
+  }
+}
