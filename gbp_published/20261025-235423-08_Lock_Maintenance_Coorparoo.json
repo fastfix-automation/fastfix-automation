@@ -1,0 +1,28 @@
+{
+  "summary": "Lock in Coorparoo feeling stiff or sticky? Don't wait for it to fail — regular lock maintenance keeps everything working smoothly. Tap Call to talk to FastFix Locksmith Brisbane.",
+  "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/08_Lock_Maintenance_Coorparoo.png",
+  "cta": {
+    "actionType": "CALL"
+  },
+  "publish_at": "2026-10-25T23:00:00Z",
+  "result": {
+    "name": "accounts/115928455367162539836/locations/9010701955233232352/localPosts/5615165525498624266",
+    "languageCode": "en",
+    "summary": "Lock in Coorparoo feeling stiff or sticky? Don't wait for it to fail — regular lock maintenance keeps everything working smoothly. Tap Call to talk to FastFix Locksmith Brisbane.",
+    "callToAction": {
+      "actionType": "CALL"
+    },
+    "state": "PROCESSING",
+    "updateTime": "2026-10-25T23:54:25.210102Z",
+    "createTime": "2026-10-25T23:54:25.210102Z",
+    "searchUrl": "https://local.google.com/place?id=13286917434322931730&use=posts&lpsid=CIHM0ogKENzDkZLRuoTxzQE",
+    "media": [
+      {
+        "name": "accounts/115928455367162539836/locations/9010701955233232352/media/localPosts/AF1QipM7NLdA8V0uWTezWN-Ve-enpHwLFDyiN0JdqXAU",
+        "mediaFormat": "PHOTO",
+        "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipM7NLdA8V0uWTezWN-Ve-enpHwLFDyiN0JdqXAU"
+      }
+    ],
+    "topicType": "STANDARD"
+  }
+}
