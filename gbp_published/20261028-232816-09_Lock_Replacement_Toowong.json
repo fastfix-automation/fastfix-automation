@@ -1,0 +1,28 @@
+{
+  "summary": "Worn, damaged or insecure locks in Toowong? We'll replace them fast so your home stays safe. Tap Call to talk to FastFix Locksmith Brisbane.",
+  "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/09_Lock_Replacement_Toowong.png",
+  "cta": {
+    "actionType": "CALL"
+  },
+  "publish_at": "2026-10-28T23:00:00Z",
+  "result": {
+    "name": "accounts/115928455367162539836/locations/9010701955233232352/localPosts/5749573833156267593",
+    "languageCode": "en",
+    "summary": "Worn, damaged or insecure locks in Toowong? We'll replace them fast so your home stays safe. Tap Call to talk to FastFix Locksmith Brisbane.",
+    "callToAction": {
+      "actionType": "CALL"
+    },
+    "state": "PROCESSING",
+    "updateTime": "2026-10-28T23:28:19.190993904Z",
+    "createTime": "2026-10-28T23:28:19.190993904Z",
+    "searchUrl": "https://local.google.com/place?id=13286917434322931730&use=posts&lpsid=CAIQACoeChxtc3BfaDpLTEN4dHkxNGpldHpaM2tGTEhrbjZB",
+    "media": [
+      {
+        "name": "accounts/115928455367162539836/locations/9010701955233232352/media/localPosts/AF1QipMcVtOuEe5paZdb1HZtOfRS7WiRew7SpLxL18tN",
+        "mediaFormat": "PHOTO",
+        "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipMcVtOuEe5paZdb1HZtOfRS7WiRew7SpLxL18tN"
+      }
+    ],
+    "topicType": "STANDARD"
+  }
+}
