@@ -1,0 +1,28 @@
+{
+  "summary": "Lost keys or just moved into a new place in Paddington? Rekey your locks so old keys no longer work. Tap Call to talk to FastFix Locksmith Brisbane.",
+  "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/10_Lock_Rekeying_Paddington.png",
+  "cta": {
+    "actionType": "CALL"
+  },
+  "publish_at": "2026-11-01T23:00:00Z",
+  "result": {
+    "name": "accounts/115928455367162539836/locations/9010701955233232352/localPosts/4517787346259877838",
+    "languageCode": "en",
+    "summary": "Lost keys or just moved into a new place in Paddington? Rekey your locks so old keys no longer work. Tap Call to talk to FastFix Locksmith Brisbane.",
+    "callToAction": {
+      "actionType": "CALL"
+    },
+    "state": "PROCESSING",
+    "updateTime": "2026-11-02T00:59:26.443948401Z",
+    "createTime": "2026-11-02T00:59:26.443948401Z",
+    "searchUrl": "https://local.google.com/place?id=13286917434322931730&use=posts&lpsid=CAIQACoeChxtc3BfaDpNbHJYbzVCX2RPM1hjZzcyREN6ZG9R",
+    "media": [
+      {
+        "name": "accounts/115928455367162539836/locations/9010701955233232352/media/localPosts/AF1QipPI2I_d6FVs9776ZXSUGp_IiCuSGh-urB6Jws6B",
+        "mediaFormat": "PHOTO",
+        "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipPI2I_d6FVs9776ZXSUGp_IiCuSGh-urB6Jws6B"
+      }
+    ],
+    "topicType": "STANDARD"
+  }
+}
