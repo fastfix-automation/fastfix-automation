@@ -1,0 +1,28 @@
+{
+  "summary": "Ditch the keys in Bulimba. Upgrade to a modern smart lock, professionally installed. Tap Call to talk to FastFix Locksmith Brisbane.",
+  "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/11_Smart_Lock_Installation_Bulimba.png",
+  "cta": {
+    "actionType": "CALL"
+  },
+  "publish_at": "2026-11-04T23:00:00Z",
+  "result": {
+    "name": "accounts/115928455367162539836/locations/9010701955233232352/localPosts/3264048201994273498",
+    "languageCode": "en",
+    "summary": "Ditch the keys in Bulimba. Upgrade to a modern smart lock, professionally installed. Tap Call to talk to FastFix Locksmith Brisbane.",
+    "callToAction": {
+      "actionType": "CALL"
+    },
+    "state": "PROCESSING",
+    "updateTime": "2026-11-05T00:06:22.783796590Z",
+    "createTime": "2026-11-05T00:06:22.783796590Z",
+    "searchUrl": "https://local.google.com/place?id=13286917434322931730&use=posts&lpsid=CAIQACoeChxtc3BfaDozb2tlRDRoeGZ6bXpEeGh1S3dVSVNB",
+    "media": [
+      {
+        "name": "accounts/115928455367162539836/locations/9010701955233232352/media/localPosts/AF1QipN4kzDjCd4AkRPTm9kLSZ4t_FrwYEic3LhRIdQC",
+        "mediaFormat": "PHOTO",
+        "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipN4kzDjCd4AkRPTm9kLSZ4t_FrwYEic3LhRIdQC"
+      }
+    ],
+    "topicType": "STANDARD"
+  }
+}
