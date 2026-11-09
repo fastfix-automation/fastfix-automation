@@ -1,0 +1,28 @@
+{
+  "summary": "Locked out in Indooroopilly? We'll get you back inside fast, day or night. Tap Call to talk to FastFix Locksmith Brisbane.",
+  "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/12_Emergency_Lockout_Indooroopilly.png",
+  "cta": {
+    "actionType": "CALL"
+  },
+  "publish_at": "2026-11-08T23:00:00Z",
+  "result": {
+    "name": "accounts/115928455367162539836/locations/9010701955233232352/localPosts/4690841225166813465",
+    "languageCode": "en",
+    "summary": "Locked out in Indooroopilly? We'll get you back inside fast, day or night. Tap Call to talk to FastFix Locksmith Brisbane.",
+    "callToAction": {
+      "actionType": "CALL"
+    },
+    "state": "PROCESSING",
+    "updateTime": "2026-11-09T01:10:22.161020452Z",
+    "createTime": "2026-11-09T01:10:22.161020452Z",
+    "searchUrl": "https://local.google.com/place?id=13286917434322931730&use=posts&lpsid=CAIQACoeChxtc3BfaDotOFlRdENfakQ5LVJGSzJZX2Y4OFJR",
+    "media": [
+      {
+        "name": "accounts/115928455367162539836/locations/9010701955233232352/media/localPosts/AF1QipOPzdKx_DnPFs9YfaFQslExwbKQEg9ZEYOmVeoT",
+        "mediaFormat": "PHOTO",
+        "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipOPzdKx_DnPFs9YfaFQslExwbKQEg9ZEYOmVeoT"
+      }
+    ],
+    "topicType": "STANDARD"
+  }
+}
