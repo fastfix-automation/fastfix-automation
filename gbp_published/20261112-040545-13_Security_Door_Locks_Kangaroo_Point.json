@@ -1,0 +1,28 @@
+{
+  "summary": "Secure your Kangaroo Point home with quality locks for security screen doors, fitted and repaired. Tap Call to talk to FastFix Locksmith Brisbane.",
+  "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/13_Security_Door_Locks_Kangaroo_Point.png",
+  "cta": {
+    "actionType": "CALL"
+  },
+  "publish_at": "2026-11-11T23:00:00Z",
+  "result": {
+    "name": "accounts/115928455367162539836/locations/9010701955233232352/localPosts/627066986302864877",
+    "languageCode": "en",
+    "summary": "Secure your Kangaroo Point home with quality locks for security screen doors, fitted and repaired. Tap Call to talk to FastFix Locksmith Brisbane.",
+    "callToAction": {
+      "actionType": "CALL"
+    },
+    "state": "PROCESSING",
+    "updateTime": "2026-11-12T04:05:47.024592318Z",
+    "createTime": "2026-11-12T04:05:47.024592318Z",
+    "searchUrl": "https://local.google.com/place?id=13286917434322931730&use=posts&lpsid=CAIQACoeChxtc3BfaDoyTEhDY19VcG1YcEswM29DNlBMbk5R",
+    "media": [
+      {
+        "name": "accounts/115928455367162539836/locations/9010701955233232352/media/localPosts/AF1QipM9XOCIi12PX6_9hCQcMVVStLkuiRKLP0oAD9ek",
+        "mediaFormat": "PHOTO",
+        "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipM9XOCIi12PX6_9hCQcMVVStLkuiRKLP0oAD9ek"
+      }
+    ],
+    "topicType": "STANDARD"
+  }
+}
