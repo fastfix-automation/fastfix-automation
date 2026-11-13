@@ -3,6 +3,5 @@
   "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/20_Commercial_Keypad_South_Brisbane.png",
   "cta": {
     "actionType": "CALL"
-  },
-  "error": "400 Bad Request for https://mybusiness.googleapis.com/v4/accounts/115928455367162539836/locations/9010701955233232352/localPosts -> {'error': {'code': 400, 'message': 'Request contains an invalid argument.', 'status': 'INVALID_ARGUMENT'}}"
+  }
 }
