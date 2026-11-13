@@ -4,5 +4,9 @@
   "targets": [
     "facebook",
     "instagram"
-  ]
+  ],
+  "results": {
+    "facebook_post_id": "1399439873246044_122121027561489298",
+    "instagram_media_id": "18121298947975310"
+  }
 }
