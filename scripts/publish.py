@@ -52,13 +52,27 @@ def _raise_with_body(resp: "requests.Response") -> None:
 
 
 def publish_to_facebook(caption: str, image_url: str) -> str:
-    resp = requests.post(
+    """Real feed post with a photo: upload the photo unpublished, then attach it to a /feed post."""
+    up = requests.post(
         f"{GRAPH_API}/{FB_PAGE_ID}/photos",
-        data={"url": image_url, "caption": caption, "access_token": PAGE_TOKEN},
+        data={"url": image_url, "published": "false", "temporary": "false", "access_token": PAGE_TOKEN},
+        timeout=60,
+    )
+    _raise_with_body(up)
+    photo_id = up.json().get("id")
+    if not photo_id:
+        raise RuntimeError(f"Facebook photo upload returned no id: {up.text}")
+    resp = requests.post(
+        f"{GRAPH_API}/{FB_PAGE_ID}/feed",
+        data={
+            "message": caption,
+            "attached_media": json.dumps([{"media_fbid": photo_id}]),
+            "access_token": PAGE_TOKEN,
+        },
         timeout=60,
     )
     _raise_with_body(resp)
-    return resp.json().get("post_id") or resp.json().get("id")
+    return resp.json().get("id")
 
 
 def publish_to_instagram(caption: str, image_url: str) -> str:
