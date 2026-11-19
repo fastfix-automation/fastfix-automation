@@ -1,0 +1,28 @@
+{
+  "summary": "Need your business locks changed in Fortitude Valley? Fast, professional lock changes for shops and offices. Tap Call to talk to FastFix Locksmith Brisbane.",
+  "image_url": "https://fastfix-automation.github.io/fastfix-automation/images/15_Commercial_Lock_Change_Fortitude_Valley.png",
+  "cta": {
+    "actionType": "CALL"
+  },
+  "publish_at": "2026-11-18T23:00:00Z",
+  "result": {
+    "name": "accounts/115928455367162539836/locations/9010701955233232352/localPosts/1988069883148166027",
+    "languageCode": "en",
+    "summary": "Need your business locks changed in Fortitude Valley? Fast, professional lock changes for shops and offices. Tap Call to talk to FastFix Locksmith Brisbane.",
+    "callToAction": {
+      "actionType": "CALL"
+    },
+    "state": "PROCESSING",
+    "updateTime": "2026-11-19T03:48:02.991292075Z",
+    "createTime": "2026-11-19T03:48:02.991292075Z",
+    "searchUrl": "https://local.google.com/place?id=13286917434322931730&use=posts&lpsid=CAIQACoeChxtc3BfaDpwOEl0UnZSZmV5Zk9Gc3ZLRDZLZzFB",
+    "media": [
+      {
+        "name": "accounts/115928455367162539836/locations/9010701955233232352/media/localPosts/AF1QipN3wnapd2nAU_aZNyHvJF4vqlKZhnJ5jvu-3TE_",
+        "mediaFormat": "PHOTO",
+        "googleUrl": "https://lh3.googleusercontent.com/p/AF1QipN3wnapd2nAU_aZNyHvJF4vqlKZhnJ5jvu-3TE_"
+      }
+    ],
+    "topicType": "STANDARD"
+  }
+}
